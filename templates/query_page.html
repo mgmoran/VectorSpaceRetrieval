@@ -1,0 +1,24 @@
+<!doctype html>
+
+<body bgcolor="#666699">
+<title style="font-family: Verdana">2019 Movie Search Engine</title>
+
+<h3 style="text-align:center; font-family:Verdana">2019 Film Search</h3>
+
+{# Use a form to prompt the user for a query.  Send the data to the server using the POST method.
+   The value of action is the path for the url that will be returned #}
+<br>
+<p style="text-align:center; font-family:Verdana">Welcome to the 2019 Movie Database Search Engine.<br> Enter your search query below, along with any optional additional filters.
+</p>
+<br><br>
+<form action="results" name="search" method="post" style="text-align:center; font-family: Verdana">
+  Query:
+    <input type="text" name="query" size=50 style="background-color: #ffffe6">
+    <br><br>
+  <input type="submit" value="Search">
+  {# Use a hidden variable called page_num to track the result page number.
+     We will increment this when the next button is selected. #}
+  <input type="hidden" name="page_num" value="1">
+</form>
+
+</body>

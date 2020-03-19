@@ -1,0 +1,52 @@
+<!doctype html>
+<title>{{data.0}}</title>
+
+<body bgcolor="#666699">
+<div style="background-color: #FFFFFF ; padding: 10px; border: 5px; font-family: Verdana">
+<h1 style="font-family: Verdana">{{ data.0 }}</h1>
+
+<table>
+        <tr>
+          <td style="font-style: bold; font-family: Verdana">Director:
+              {% for director in data.1 %}
+                {{director}}
+                  {% if not loop.last %}
+                      ,
+                  {% endif %}
+              {% endfor %}
+          </td>
+        </tr>
+	<tr>
+         <td style="font-style: bold; font-family: Verdana">Country:
+             {% for country in data.2 %}
+                {{country}}
+                  {% if not loop.last %}
+                      ,
+                  {% endif %}
+              {% endfor %}
+        </td>
+	</tr>
+	<tr>
+         <td style="font-style: bold; font-family: Verdana">Starring:
+            {% for actor in data.3 %}
+                {{actor}}
+                 {% if not loop.last %}
+                     ,
+                  {% endif %}
+            {% endfor %}
+        </td>
+	</tr>
+    <tr>
+        <td style="font-style: bold; font-family: Verdana">Text:<br><br>
+            {% for para in data.4 %}
+                {{para}} <br>
+            {% endfor %}
+        </td>
+	</tr>
+	
+</table>
+<br>
+<br>
+</div>
+(Use browser "back" button to return to search results.)
+</body>
